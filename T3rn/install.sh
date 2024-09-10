@@ -1,11 +1,23 @@
 #!/bin/bash
 
-echo "Showing FE logo..."
-wget -O loader.sh https://raw.githubusercontent.com/FEdanish/fenode-guide/main/loader.sh && chmod +x loader.sh && ./loader.sh
-curl -s https://raw.githubusercontent.com/FEdanish/fenode-guide/main/logo.sh | bash
-sleep 2
+# Colors for fancy display
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
 
-echo "Welcome to the t3rn Executor Setup by feature earning!"
+# Fun Loading Bar Animation
+echo -e "${GREEN}Starting up...${NC}"
+sleep 1
+
+echo -n "["
+for i in {1..30}; do
+    echo -n "="
+    sleep 0.05
+done
+echo "] Done!"
+sleep 1
+
+# Fun text message
+echo -e "${GREEN}Welcome to the @_fabulous_mr t3rn Executor Setup!${NC}"
 
 cd $HOME
 sudo apt -q update
