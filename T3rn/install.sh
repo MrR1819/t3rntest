@@ -1,23 +1,7 @@
 #!/bin/bash
 
-# Colors for fancy display
-GREEN='\033[0;32m'
-NC='\033[0m' # No Color
-
-# Fun Loading Bar Animation
-echo -e "${GREEN}Starting up...${NC}"
-sleep 1
-
-echo -n "["
-for i in {1..30}; do
-    echo -n "="
-    sleep 0.05
-done
-echo "] Done!"
-sleep 1
-
-# Fun text message
-echo -e "${GREEN}Welcome to the @_fabulous_mr t3rn Executor Setup!${NC}"
+# Display welcome message
+echo "Welcome to the t3rn Executor Setup by @_fabulous_mr!"
 
 cd $HOME
 sudo apt -q update
